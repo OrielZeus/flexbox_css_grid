@@ -1,10 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
-
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;800&family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,100;1,300;1,500;1,900&display=swap');
+/*estilos generales*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+/*body*/
 body {
   font-family: 'Roboto', sans-serif;
+}
+/*estilos al menu*/
+.navbar{
+  background-color: #EDCB54;
+  display: grid;
+  /*alinear de manera vertical*/
+  grid-template-columns: repeat(8, 1fr);
+  /*centrar*/
+  align-items: center;
+}
+.navbar .logo{
+  width: 60px;
+  height: 60px;
+  /*maquetar con css gread colocar en columna 2*/
+  grid-column: 2 / 3;
+}
+.navbar .menu{
+  /*del 4 hasta el 7 para ponerlos horizontalmente+*/
+  grid-column: 4 / 7;
+  /*poner los objetos uno al lado del otro*/
+  display: flex;
+  justify-content: space-around;
+}
+.navbar .menu li{
+  /*quitar viñetas*/
+  list-style: none;
+}
+.navbar .menu a{
+  /*quitar enlaces*/
+  text-decoration: none;
+  color: #181818;
+  cursor: pointer;
+}
+.navbar .menu-bar{
+  display: none;
+}
+.navbar .shopping{
+  grid-column: 8 / 9;
 }

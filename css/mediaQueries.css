@@ -1,3 +1,30 @@
 @media only screen and (max-width: 600px)  {
-  
+  .navbar{
+      position: relative;
+  }
+  .navbar .shopping {
+      display: none;
+  }
+  .navbar .menu-bar{
+      display: block;
+      grid-column: 8/9;
+      font-size: 2em;
+      cursor: pointer;
+  }
+  .navbar .menu {
+      position: absolute;
+      width: 100%;
+      height: 70vh;
+      display: grid;
+      align-items: center;
+      background-color: #EDCB54;
+      /*cambiado de 38 a 30*/
+      margin-top: 30em;
+      transform: translateX(170%);
+      transition: all 1s;
+  }
+  /*Crear clase menu toggle*/
+  .navbar .menu-toggle{
+      transform: translateX(70%);
+  }
 }
