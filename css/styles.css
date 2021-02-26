@@ -42,9 +42,57 @@ body {
   color: #181818;
   cursor: pointer;
 }
+.navbar .menu a:hover{
+  color: #fff;
+}
 .navbar .menu-bar{
   display: none;
 }
 .navbar .shopping{
   grid-column: 8 / 9;
+}
+/*Seccion main */
+.hero{
+  height: 80vh;
+  /*Overlay rgba(16,16,16, .8)*/
+  background-image:linear-gradient(rgba(16,16,16, .8),rgba(16,16,16, .8)), url(../img/bg.jpg);
+  background-size: cover;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  grid-template-rows: repeat(8,1fr);
+}
+.hero .info-content{
+  grid-column: 7/10;
+  grid-row: 3/7;
+  color: #fff;
+}
+.hero h3{
+  font-family: 'Montserrat' , sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+.hero h1{
+  font-size: 5em;
+  color: #EDCB54;
+}
+.hero p{
+  font-weight: 300;
+  font-family: 'Montserrat',sans-serif;
+}
+.hero .btn{
+  font-size: 1em;
+  background: none;
+  color: #fff;
+  /*tamaño del boton*/
+  padding: 10px 20px;
+  border: 1px solid #EDCB54;
+  /*Redondear el boton*/
+  border-radius: 30px;
+  /*Separao del boton*/
+  margin-top: 10px;
+}
+.hero .btn:hover{
+  background-color: #EDCB54;
+  color: #181818;
 }
