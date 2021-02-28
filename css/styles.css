@@ -9,10 +9,13 @@
 /*body*/
 body {
   font-family: 'Roboto', sans-serif;
+  /**/
+  overflow: hidden;
 }
 /*estilos al menu*/
 .navbar{
   background-color: #EDCB54;
+  /*usa grid para usar caracteristicas flex cambiar a flex */
   display: grid;
   /*alinear de manera vertical*/
   grid-template-columns: repeat(8, 1fr);
@@ -53,6 +56,7 @@ body {
 }
 /*Seccion main */
 .hero{
+  /*rango de la imagen*/
   height: 80vh;
   /*Overlay rgba(16,16,16, .8)*/
   background-image:linear-gradient(rgba(16,16,16, .8),rgba(16,16,16, .8)), url(../img/bg.jpg);
@@ -96,3 +100,101 @@ body {
   background-color: #EDCB54;
   color: #181818;
 }
+/*Variables en css*/
+:root{
+  --primaryColor: #0c0c0c ;
+  --contrastColor: #86fcb0; 
+}
+/*Haciendo uso de la variable */
+body{
+  background-color: var(--primaryColor);
+}
+/*Seccion footer */
+.footer {
+  display: grid ;
+  height: 80px;
+  align-items: center;
+  background-color: #181818;
+  color: #fff ;
+  grid-template-areas: "listen-online follow-me social-network";
+}
+.footer .listen-online{
+  grid-template-areas: listen-online;
+  display: flex;
+  justify-content: center;
+  background-color: #EDCB54;
+  padding: 26px;
+  color: #181818;
+}
+.footer .listen-online .fas{
+  font-size: 1.5em;
+  margin-right: 15px;
+}
+.footer .follow-me{
+  grid-template-areas: follow-me;
+  text-align: center;
+}
+.footer .social-network{
+  grid-template-areas: social-network;
+  font-size: 1.3em;
+}
+.footer .social-network .fab{
+  color: #EDCB54;
+  margin-right: 15px;
+}
+.footer .social-network .fab:hover{
+  color:#fff;
+
+}
+/* otro ejemplo
+h1{
+  color:var(--contrastColor);
+  margin-top: 3em;
+  font-size: 3em;
+}*/
+/*
+Unidades de medida exacta 
+px
+Unidades de medida relativa
+%
+em 1em=16px buena para el responsive
+rem igual que rem pero root em  es la raiz del documento preferido para la tipografia font-size: 2rem 
+vw viewport width se adapta al dispositivo que se esta utilizando
+vh viewport heigth mejorando la accesibilidad e la pagina 
+mas ejemplos 
+https://www.w3.org/TR/WCAG10-CSS-TECHS/
+*/
+
+/*Flex 
+usando el justify-content para trabajar en el eje X main axis
+
+Flex-start lleva los objetos a la izquierda 
+Flex-end lleva los objetos a la derecha
+Center los coloca en el centro
+Space-around deja espacios entre objetos tambien todo a su alrededor
+Space-between deja espacios solo entre lso objetos 
+
+utilizando align-item para trabajar en el eje y o cross axis
+
+Flex-start lleva los objetos arriba 
+Flex-end lleva los objetos abajo
+Center los coloca en el centro
+
+con flex-direction: column; cambias la direccion de rotacion de los ejes a una columna de arriba a abajo 
+con flex-direction: row; lo mantiene en el eje x ->->-> osea como fila 
+
+*/
+
+/*flex 
+flex-flow:row; por defecto 
+flex-flow:row nowrap; que se mantenga todo en una misma fila y se mantiene en responsive en la misma linea
+con wrap se acomoda como para el elemento responsive
+flex-flow:colum para que sea columna
+flex-flow:colum reverse para que sea columna del final al principio 
+con wrap reverse se va al final del todo
+
+*/
+
+/*
+align.self pone elementos individualmente
+*/
